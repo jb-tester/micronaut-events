@@ -19,7 +19,7 @@ public class MyEventsPublisher {
     @Inject
     ApplicationEventPublisher eventPublisher;
 
-    public void publishSampleEvent() {
+    public void publishEvents() {
         eventPublisher.publishEvent(new MyEvent1());  // navigates to listeners in the same module
         eventPublisher.publishEvent(new MyLibEvent00());  // navigates to listener in diff module
     }
