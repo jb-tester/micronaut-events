@@ -14,6 +14,8 @@ import javax.inject.Singleton;
  */
 @Singleton
 public class MyLibEvent2Listener implements ApplicationEventListener<MyLibEvent2> {
+
+    // navigates to publisher in the diff module
     @Override
     public void onApplicationEvent(MyLibEvent2 event) {
         System.out.println("MyLibEvent2 happened");

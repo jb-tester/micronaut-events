@@ -20,7 +20,7 @@ public class LibEventsPublisher {
     @Inject
     ApplicationEventPublisher eventPublisher;
 
-    @Scheduled(fixedRate = "100s")
+    @Scheduled(fixedRate = "100s")  // should navigate to listeners in the diff module
     public void publishSampleEvent() {
         eventPublisher.publishEvent(new MyLibEvent1());
         eventPublisher.publishEvent(new MyLibEvent2(this));

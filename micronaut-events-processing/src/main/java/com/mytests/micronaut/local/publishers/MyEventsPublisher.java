@@ -1,5 +1,6 @@
 package com.mytests.micronaut.local.publishers;
 
+import com.mytests.micronaut.eventsLibrary.MyLibEvent00;
 import com.mytests.micronaut.local.myevents.MyEvent1;
 import io.micronaut.context.event.ApplicationEventPublisher;
 
@@ -19,6 +20,7 @@ public class MyEventsPublisher {
     ApplicationEventPublisher eventPublisher;
 
     public void publishSampleEvent() {
-        eventPublisher.publishEvent(new MyEvent1());
+        eventPublisher.publishEvent(new MyEvent1());  // navigates to listeners in the same module
+        eventPublisher.publishEvent(new MyLibEvent00());  // navigates to listener in diff module
     }
 }

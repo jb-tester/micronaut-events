@@ -1,5 +1,6 @@
 package com.mytests.micronaut.startupEventListeners;
 
+import io.micronaut.context.event.ShutdownEvent;
 import io.micronaut.context.event.StartupEvent;
 import io.micronaut.runtime.event.annotation.EventListener;
 
@@ -14,7 +15,7 @@ import javax.inject.Singleton;
 @Singleton
 public class ThirdListener {
 
-    @EventListener
+    @EventListener   // should navigate to io.micronaut.context.DefaultBeanContext.start
     void onStartup(StartupEvent se) {
         System.out.println("StartupEvent from @EventListener-annotated method");
     }

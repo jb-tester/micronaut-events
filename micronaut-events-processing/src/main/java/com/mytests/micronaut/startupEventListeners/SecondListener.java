@@ -15,6 +15,7 @@ import javax.inject.Singleton;
 @Singleton
 public class SecondListener {
 
+    // should navigate to io.micronaut.context.DefaultBeanContext.start
     @Adapter(ApplicationEventListener.class)
     void onStartup(StartupEvent event) {
         System.out.println("StartupEvent from @Adapter(ApplicationEventListener)");

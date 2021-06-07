@@ -14,6 +14,8 @@ import javax.inject.Singleton;
  */
 @Singleton
 public class FirstListener implements ApplicationEventListener<StartupEvent> {
+
+    // should navigate to io.micronaut.context.DefaultBeanContext.start
     @Override
     public void onApplicationEvent(StartupEvent event) {
         System.out.println("StartupEvent from class that implements ApplicationEventListener<StartupEvent>");

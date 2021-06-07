@@ -14,7 +14,7 @@ import javax.inject.Singleton;
 @Singleton
 public class MyLibEvent1Listener {
 
-    @EventListener
+    @EventListener // navigates to publisher in the diff module
     public void onMyLibEvent1(MyLibEvent1 event){
         System.out.println(event.getMessage());
     }
